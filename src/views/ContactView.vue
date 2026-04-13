@@ -69,7 +69,7 @@ const iconMap = {
       <!-- Info Footer -->
       <div class="p-6 rounded-2xl bg-pecatu/5 border border-pecatu/10">
         <h4 class="font-bold text-pecatu mb-2">Punya Pertanyaan Lain?</h4>
-        <p class="text-sm text-slate-600 leading-relaxed">Jika ada masalah yang tidak terwakili di sini, silakan hubungi pengurus RT/RW setempat.</p>
+        <p class="text-sm text-slate-600 leading-relaxed">Jika ada masalah yang tidak terwakili di sini, silakan hubungi Pengurus Paguyuban Pecatu Residence setempat.</p>
       </div>
     </div>
   </div>
