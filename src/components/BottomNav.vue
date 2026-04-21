@@ -1,12 +1,13 @@
 <script setup>
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
-import { Home, Phone, Info, LayoutGrid } from 'lucide-vue-next'
+import { Home, Phone, Info, LayoutGrid, Wallet } from 'lucide-vue-next'
 
 const route = useRoute()
 
 const navItems = [
   { name: 'Home', path: '/', icon: Home },
+  { name: 'Keuangan', path: '/keuangan', icon: Wallet },
   { name: 'Kontak', path: '/kontak', icon: Phone },
   { name: 'Layanan', path: '/layanan', icon: LayoutGrid },
   { name: 'Info', path: '/berita', icon: Info },
