@@ -395,5 +395,312 @@ export const financialReports = [
       }
     ],
     "final_balance": 3376852
+  },
+  {
+    "report_title": "LAPORAN KEUANGAN BULAN JANUARI 2025",
+    "starting_balance": {
+      "description": "SISA SALDO DESEMBER 2024",
+      "amount": 2623852
+    },
+    "transactions": [
+      {
+        "date": "1-Jan-2025",
+        "description": "Dana Gotong Royong Markus Branly Siregar/Dina Kristiana - Akasha O.30/56 - Aug 2024 - Jul 2026",
+        "debit": 0,
+        "credit": 360000,
+        "balance": 2983852
+      },
+      {
+        "date": "2-Jan-2025",
+        "description": "Dana Gotong Royong Ibu Lian - Ayodya O.23/30 - Jan 2025",
+        "debit": 0,
+        "credit": 15000,
+        "balance": 2998852
+      },
+      {
+        "date": "2-Jan-2025",
+        "description": "Dana Gotong Royong Bu Roswen (Iuran Sukarela 5000) - Ayodya O.18/20 - Dec 2024- Feb 2025",
+        "debit": 0,
+        "credit": 50000,
+        "balance": 3048852
+      },
+      {
+        "date": "5-Jan-2025",
+        "description": "Dana Gotong Royong Agus/Pak Jokowi - Amartha O.05/50 - Jan - Feb 2025",
+        "debit": 0,
+        "credit": 30000,
+        "balance": 3078852
+      },
+      {
+        "date": "6-Jan-2025",
+        "description": "Air minum security 10x7000 = 70000",
+        "debit": 70000,
+        "credit": 0,
+        "balance": 3008852
+      },
+      {
+        "date": "9-Jan-2025",
+        "description": "Dana Gotong Royong Lisna/ Alfonsus Adrian - Akasha O.38/27-29 - Jan - Dec 2025",
+        "debit": 0,
+        "credit": 180000,
+        "balance": 3188852
+      },
+      {
+        "date": "14-Jan-2025",
+        "description": "Dana Gotong Royong Pak Anthony - Akasha O.33/09 - Jan - Dec 2025",
+        "debit": 0,
+        "credit": 180000,
+        "balance": 3368852
+      },
+      {
+        "date": "14-Jan-2025",
+        "description": "Dana Gotong Royong Luis - Ayodya O.27/10 - Dec 2023, Apr, Jun, Aug 2024",
+        "debit": 0,
+        "credit": 60000,
+        "balance": 3428852
+      },
+      {
+        "date": "14-Jan-2025",
+        "description": "Dana Gotong Royong Widi - Ayodya O.25/32 - Oct 2024 - Dec 2025",
+        "debit": 0,
+        "credit": 225000,
+        "balance": 3653852
+      },
+      {
+        "date": "14-Jan-2025",
+        "description": "Dana Gotong Royong Bu Hudy - Akasha O.58/05 - Nov 2024 - Feb 2025",
+        "debit": 0,
+        "credit": 60000,
+        "balance": 3713852
+      },
+      {
+        "date": "14-Jan-2025",
+        "description": "Dana Gotong Royong (Sukarela 5000) Bu Leni Hartati - Ayodya O.20/08 - Feb - Apr 2025",
+        "debit": 0,
+        "credit": 50000,
+        "balance": 3763852
+      },
+      {
+        "date": "15-Jan-2025",
+        "description": "Dana Gotong Royong Bu Evelyn - Akasha O.57/18 - Jan - Dec 2025",
+        "debit": 0,
+        "credit": 180000,
+        "balance": 3943852
+      },
+      {
+        "date": "15-Jan-2025",
+        "description": "Dana Gotong Royong Tandy - Akasha O.63/03 - Jan - Dec 2025",
+        "debit": 0,
+        "credit": 180000,
+        "balance": 4123852
+      },
+      {
+        "date": "16-Jan-2025",
+        "description": "Dana Gotong Royong Bayu Hermawan - Akasha O.62/10 - Jan - Dec 2025",
+        "debit": 0,
+        "credit": 180000,
+        "balance": 4303852
+      },
+      {
+        "date": "16-Jan-2025",
+        "description": "Dana Gotong Royong Willy - Akasha O.58/62 - Jan - Dec 2025",
+        "debit": 0,
+        "credit": 180000,
+        "balance": 4483852
+      },
+      {
+        "date": "16-Jan-2025",
+        "description": "Dana Gotong Royong Bu Ila - Akasha O.62/12 - Jan - Feb 2025",
+        "debit": 0,
+        "credit": 30000,
+        "balance": 4513852
+      },
+      {
+        "date": "16-Jan-2025",
+        "description": "Dana Gotong Royong Rika - Akasha O.30/37 - Jan 2025",
+        "debit": 0,
+        "credit": 15000,
+        "balance": 4528852
+      },
+      {
+        "date": "23-Jan-2025",
+        "description": "Dana Gotong Royong Yulius Andri - Ayodya O.23/17 - Jan 2025",
+        "debit": 0,
+        "credit": 15000,
+        "balance": 4543852
+      },
+      {
+        "date": "24-Jan-2025",
+        "description": "Dana Gotong Royong Bu Lia/Pak Agus - Akasha O.33/29 - Jun - Dec 2025",
+        "debit": 0,
+        "credit": 105000,
+        "balance": 4648852
+      },
+      {
+        "date": "24-Jan-2025",
+        "description": "Dana Gotong Royong Pak Faisal - Amartha O.08/06 - Jan - Mar 2025",
+        "debit": 0,
+        "credit": 45000,
+        "balance": 4693852
+      },
+      {
+        "date": "25-Jan-2025",
+        "description": "Insentif security February 2025 (4x125)",
+        "debit": 500000,
+        "credit": 0,
+        "balance": 4193852
+      },
+      {
+        "date": "25-Jan-2025",
+        "description": "Dana Gotong Royong Johannes - Akasha O.31/08 - Jan - Mar 2025",
+        "debit": 0,
+        "credit": 45000,
+        "balance": 4238852
+      },
+      {
+        "date": "27-Jan-2025",
+        "description": "Dana Gotong Royong Pak Taufan/Bu Uni - Akasha O.63/16 - Jan - Dec 2025",
+        "debit": 0,
+        "credit": 180000,
+        "balance": 4418852
+      },
+      {
+        "date": "28-Jan-2025",
+        "description": "Dana Gotong Royong Ichsan/Dwi Yuliani Hartika - Ayodya O.28/11 - Jan - Mar 2025",
+        "debit": 0,
+        "credit": 45000,
+        "balance": 4463852
+      },
+      {
+        "date": "31-Jan-2025",
+        "description": "Dana Gotong Royong Bu Lia/Pak Agus - Akasha O.33/29 - Jan  2026 - Dec 2027",
+        "debit": 0,
+        "credit": 360000,
+        "balance": 4823852
+      }
+    ],
+    "final_balance": 4823852
+  },
+  {
+    "report_title": "LAPORAN KEUANGAN BULAN DESEMBER 2024",
+    "starting_balance": {
+      "description": "SISA SALDO NOVEMBER 2024",
+      "amount": 1963852
+    },
+    "transactions": [
+      {
+        "date": "1-Des-2024",
+        "description": "Dana Gotong Royong Ibu Lian - Ayodya O.23/30 - Dec 2024",
+        "debit": 0,
+        "credit": 15000,
+        "balance": 1978852
+      },
+      {
+        "date": "1-Des-2024",
+        "description": "Dana Gotong Royong Kevin Purnama - Akasha O.36/05 - Jan - Mar 2025",
+        "debit": 0,
+        "credit": 45000,
+        "balance": 2023852
+      },
+      {
+        "date": "2-Des-2024",
+        "description": "Dana Gotong Royong Pak Bambang - Akasha O.35/12 -Jan - Dec 2025",
+        "debit": 0,
+        "credit": 180000,
+        "balance": 2203852
+      },
+      {
+        "date": "2-Des-2024",
+        "description": "Air Minum Security Nov 2024 (10x7 ribu)",
+        "debit": 70000,
+        "credit": 0,
+        "balance": 2133852
+      },
+      {
+        "date": "3-Des-2024",
+        "description": "Dana Gotong Royong Yulius Andri - Ayodya O.23/17 - Nov 2024",
+        "debit": 0,
+        "credit": 15000,
+        "balance": 2148852
+      },
+      {
+        "date": "4-Des-2024",
+        "description": "Dana Gotong Royong Bu Very - Akasha O.50/27 - Jan - Dec 2025",
+        "debit": 0,
+        "credit": 180000,
+        "balance": 2328852
+      },
+      {
+        "date": "5-Des-2024",
+        "description": "Dana Gotong Royong (Sukarela 5000) Pak Christian Adhii - Akasha O.30/31 - Jan - Mar 2025",
+        "debit": 0,
+        "credit": 50000,
+        "balance": 2378852
+      },
+      {
+        "date": "5-Des-2024",
+        "description": "Dana Gotong Royong Bu Qori Julfa- Akasha O.55/10 - Dec 2024",
+        "debit": 0,
+        "credit": 15000,
+        "balance": 2393852
+      },
+      {
+        "date": "9-Des-2024",
+        "description": "Dana Gotong Royong Bu Lina - Akasha O.35/32 - Jan - Oct 2024",
+        "debit": 0,
+        "credit": 150000,
+        "balance": 2543852
+      },
+      {
+        "date": "13-Des-2024",
+        "description": "Dana Gotong Royong Rika - Akasha O.30/37 - Dec 2024",
+        "debit": 0,
+        "credit": 15000,
+        "balance": 2558852
+      },
+      {
+        "date": "14-Des-2024",
+        "description": "Dana Gotong Royong Pak Wahyu - Amartha O.12/10- Dec 2024 - Dec 2025",
+        "debit": 0,
+        "credit": 195000,
+        "balance": 2753852
+      },
+      {
+        "date": "14-Des-2024",
+        "description": "Dana Gotong Royong Yulius Andri - Ayodya O.23/17 - Dec 2024",
+        "debit": 0,
+        "credit": 15000,
+        "balance": 2768852
+      },
+      {
+        "date": "17-Des-2024",
+        "description": "Dana Gotong Royong Pak Dedik - Amartha - O.08/03 - Okt - Nov 2023, Aug - Dec 2024",
+        "debit": 0,
+        "credit": 75000,
+        "balance": 2843852
+      },
+      {
+        "date": "20-Des-2024",
+        "description": "Dana Gotong Royong Friska - Ayodya O.26/18 - Mei  2024 - Feb 2025",
+        "debit": 0,
+        "credit": 150000,
+        "balance": 2993852
+      },
+      {
+        "date": "20-Des-2024",
+        "description": "Dana Gotong Royong Bu Lina - Akasha O.35/32 - Nov - Dec 2024",
+        "debit": 0,
+        "credit": 30000,
+        "balance": 3023852
+      },
+      {
+        "date": "28-Des-2024",
+        "description": "Insentif Security January 2025 (4x100 ribu)",
+        "debit": 400000,
+        "credit": 0,
+        "balance": 2623852
+      }
+    ],
+    "final_balance": 2623852
   }
 ]
