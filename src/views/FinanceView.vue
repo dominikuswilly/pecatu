@@ -1,9 +1,10 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
-import { 
-  Wallet, 
-  ArrowUpRight, 
-  ArrowDownLeft, 
+import {
+  Wallet,
+  ArrowLeft,
+  ArrowUpRight,
+  ArrowDownLeft,
   ChevronLeft,
   Calendar,
   History,
@@ -15,7 +16,6 @@ import {
 } from 'lucide-vue-next'
 import { useRouter } from 'vue-router'
 import { financialReports } from '@/data/finance'
-import Header from '@/components/Header.vue'
 
 const router = useRouter()
 const isLoading = ref(false)
@@ -54,10 +54,10 @@ watch(selectedYear, (newYear) => {
 
 const selectReport = (title) => {
   if (selectedReportTitle.value === title) return
-  
+
   isLoading.value = true
   selectedReportTitle.value = title
-  
+
   // Simulate loading for premium feel
   setTimeout(() => {
     isLoading.value = false
@@ -129,36 +129,32 @@ const getTransactionColor = (transaction) => {
 
 <template>
   <div class="min-h-screen bg-slate-50 pb-32 animate-in fade-in duration-500">
-    <Header />
-    
     <main class="px-6 py-4 space-y-8">
-      <!-- Sticky Navigation Header -->
-      <section class="sticky top-0 z-40 bg-slate-50/90 backdrop-blur-md px-6 py-4 -mx-6 border-b border-white mb-2">
-        <div class="flex items-center justify-between mb-5">
-          <div class="flex items-center gap-4">
-            <button 
-              @click="router.back()"
-              class="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-600 active:scale-95 transition-all shadow-sm"
-            >
-              <ChevronLeft :size="20" />
-            </button>
-            <div>
-              <h2 class="text-2xl font-serif font-bold text-slate-800 leading-tight">Laporan Keuangan</h2>
-              <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-0.5">Cluster Pecatu Residence</p>
-            </div>
-          </div>
+      <!-- Header (Aligned with ContactView) -->
+      <div
+        class="sticky top-0 z-40 bg-white/80 backdrop-blur-md px-6 py-4 flex items-center gap-4 border-b border-slate-100 -mx-6 -mt-4">
+        <button @click="router.back()"
+          class="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 active:scale-90 transition-all">
+          <ArrowLeft :size="20" />
+        </button>
+        <h1 class="text-xl font-serif font-bold text-slate-800">Laporan Keuangan</h1>
+      </div>
 
+      <!-- Selectors Section -->
+      <section
+        class="sticky top-[72px] z-40 bg-slate-50/90 backdrop-blur-md px-6 -mx-6 border-b border-white space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Pilih Tahun</span>
           <!-- Year Selector -->
           <div class="relative group">
-            <div class="flex items-center gap-2 bg-white border border-slate-200 rounded-2xl px-4 py-2.5 shadow-sm active:scale-95 transition-all cursor-pointer">
-              <Calendar :size="16" class="text-pecatu" />
-              <select 
-                v-model="selectedYear"
-                class="appearance-none bg-transparent text-sm font-bold text-slate-700 focus:outline-none pr-4"
-              >
+            <div
+              class="flex items-center gap-2 bg-white border border-slate-200 rounded-2xl px-4 py-2 shadow-sm active:scale-95 transition-all cursor-pointer">
+              <Calendar :size="14" class="text-pecatu" />
+              <select v-model="selectedYear"
+                class="appearance-none bg-transparent text-xs font-bold text-slate-700 focus:outline-none pr-4">
                 <option v-for="year in availableYears" :key="year" :value="year">{{ year }}</option>
               </select>
-              <ChevronRight :size="14" class="text-slate-400 rotate-90" />
+              <ChevronRight :size="12" class="text-slate-400 rotate-90" />
             </div>
           </div>
         </div>
@@ -166,21 +162,21 @@ const getTransactionColor = (transaction) => {
         <!-- Horizontal Month Selector with Ghost Fade -->
         <div class="relative -mx-2">
           <div class="flex gap-2 overflow-x-auto pb-2 scrollbar-none px-2 snap-x">
-            <button 
-              v-for="report in filteredReports" 
-              :key="report.report_title"
+            <button v-for="report in filteredReports" :key="report.report_title"
               @click="selectReport(report.report_title)"
-              class="shrink-0 px-6 py-2.5 rounded-2xl text-xs font-bold transition-all border snap-start"
-              :class="selectedReportTitle === report.report_title 
-                ? 'bg-pecatu text-white border-pecatu shadow-lg shadow-pecatu/20' 
-                : 'bg-white text-slate-600 border-slate-100 hover:border-slate-300'"
-            >
+              class="shrink-0 px-6 py-2.5 rounded-2xl text-xs font-bold transition-all border snap-start" :class="selectedReportTitle === report.report_title
+                ? 'bg-pecatu text-white border-pecatu shadow-lg shadow-pecatu/20'
+                : 'bg-white text-slate-600 border-slate-100 hover:border-slate-300'">
               {{ report.report_title.split(' ')[3] }}
             </button>
           </div>
           <!-- Edge Fades (Ghost Sliders) -->
-          <div class="absolute top-0 right-0 bottom-2 w-12 bg-gradient-to-l from-slate-50 to-transparent pointer-events-none"></div>
-          <div class="absolute top-0 left-0 bottom-2 w-12 bg-gradient-to-r from-slate-50 to-transparent pointer-events-none"></div>
+          <div
+            class="absolute top-0 right-0 bottom-2 w-12 bg-gradient-to-l from-slate-50 to-transparent pointer-events-none">
+          </div>
+          <div
+            class="absolute top-0 left-0 bottom-2 w-12 bg-gradient-to-r from-slate-50 to-transparent pointer-events-none">
+          </div>
         </div>
       </section>
 
@@ -203,11 +199,12 @@ const getTransactionColor = (transaction) => {
         </div>
 
         <Transition name="slide-up" mode="out-in">
-          <div :key="selectedReportTitle" v-if="!isLoading && currentReport" class="relative overflow-hidden bg-pecatu rounded-[2rem] p-6 text-white shadow-2xl shadow-pecatu/20">
+          <div :key="selectedReportTitle" v-if="!isLoading && currentReport"
+            class="relative overflow-hidden bg-pecatu rounded-[2rem] p-6 text-white shadow-2xl shadow-pecatu/20">
             <!-- Decorative shapes -->
             <div class="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
             <div class="absolute -bottom-10 -left-10 w-32 h-32 bg-pecatu-light/30 rounded-full blur-2xl"></div>
-            
+
             <div class="relative space-y-6">
               <div class="flex justify-between items-start">
                 <div class="space-y-1">
@@ -218,7 +215,7 @@ const getTransactionColor = (transaction) => {
                   <Wallet :size="24" />
                 </div>
               </div>
-              
+
               <div class="pt-4 border-t border-white/10 flex justify-between items-center">
                 <div class="flex items-center gap-2">
                   <div class="w-8 h-8 rounded-full bg-white/15 flex items-center justify-center">
@@ -244,26 +241,26 @@ const getTransactionColor = (transaction) => {
 
       <!-- Statistics -->
       <section class="grid grid-cols-2 gap-4">
-        <div class="glass-card p-4 space-y-2" :class="{'animate-pulse bg-slate-100': isLoading}">
+        <div class="glass-card p-4 space-y-2" :class="{ 'animate-pulse bg-slate-100': isLoading }">
           <div v-if="!isLoading" class="space-y-2">
             <div class="flex items-center gap-2 text-emerald-600">
               <TrendingUp :size="16" />
               <span class="text-[10px] font-bold uppercase tracking-wider">Pemasukan</span>
             </div>
             <p class="text-lg font-bold text-slate-800">
-              {{ formatCurrency(currentReport.transactions.reduce((acc, t) => acc + t.credit, 0)) }}
+              {{formatCurrency(currentReport.transactions.reduce((acc, t) => acc + t.credit, 0))}}
             </p>
           </div>
           <div v-else class="h-12"></div>
         </div>
-        <div class="glass-card p-4 space-y-2" :class="{'animate-pulse bg-slate-100': isLoading}">
+        <div class="glass-card p-4 space-y-2" :class="{ 'animate-pulse bg-slate-100': isLoading }">
           <div v-if="!isLoading" class="space-y-2">
             <div class="flex items-center gap-2 text-rose-500">
               <TrendingDown :size="16" />
               <span class="text-[10px] font-bold uppercase tracking-wider">Pengeluaran</span>
             </div>
             <p class="text-lg font-bold text-slate-800">
-              {{ formatCurrency(currentReport.transactions.reduce((acc, t) => acc + t.debit, 0)) }}
+              {{formatCurrency(currentReport.transactions.reduce((acc, t) => acc + t.debit, 0))}}
             </p>
           </div>
           <div v-else class="h-12"></div>
@@ -279,14 +276,18 @@ const getTransactionColor = (transaction) => {
           </span>
           <div v-else class="w-16 h-6 bg-slate-100 rounded-full animate-pulse"></div>
         </div>
-        
+
         <div class="space-y-3 relative min-h-[200px]">
           <!-- Skeleton Rows -->
           <div v-if="isLoading" class="space-y-3">
-            <div v-for="i in 5" :key="i" class="bg-white p-4 rounded-2xl border border-slate-50 flex items-center gap-4 animate-pulse">
+            <div v-for="i in 5" :key="i"
+              class="bg-white p-4 rounded-2xl border border-slate-50 flex items-center gap-4 animate-pulse">
               <div class="w-12 h-12 rounded-xl bg-slate-100"></div>
               <div class="flex-1 space-y-2">
-                <div class="flex justify-between"><div class="w-16 h-2 bg-slate-100 rounded"></div><div class="w-20 h-3 bg-slate-100 rounded"></div></div>
+                <div class="flex justify-between">
+                  <div class="w-16 h-2 bg-slate-100 rounded"></div>
+                  <div class="w-20 h-3 bg-slate-100 rounded"></div>
+                </div>
                 <div class="w-3/4 h-4 bg-slate-100 rounded"></div>
               </div>
             </div>
@@ -294,11 +295,8 @@ const getTransactionColor = (transaction) => {
 
           <TransitionGroup v-else name="list-complete" tag="div" class="space-y-3">
             <!-- Empty State -->
-            <div 
-              v-if="sortedTransactions.length === 0" 
-              key="empty"
-              class="flex flex-col items-center justify-center py-12 px-6 bg-white rounded-3xl border border-dashed border-slate-200 text-center space-y-4"
-            >
+            <div v-if="sortedTransactions.length === 0" key="empty"
+              class="flex flex-col items-center justify-center py-12 px-6 bg-white rounded-3xl border border-dashed border-slate-200 text-center space-y-4">
               <div class="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center text-slate-300">
                 <History :size="32" />
               </div>
@@ -309,34 +307,29 @@ const getTransactionColor = (transaction) => {
             </div>
 
             <!-- Transaction Items -->
-            <div 
-              v-for="(transaction, index) in sortedTransactions" 
-              :key="transaction.description + transaction.date"
+            <div v-for="(transaction, index) in sortedTransactions" :key="transaction.description + transaction.date"
               class="transaction-item relative group bg-white p-4 rounded-2xl border border-slate-100 flex items-center gap-4 hover:border-pecatu/20 transition-all active:scale-[0.98]"
-              @click.stop="toggleTooltip(index)"
-            >
+              @click.stop="toggleTooltip(index)">
               <!-- Transaction Icon -->
-              <div 
-                class="w-12 h-12 rounded-xl shrink-0 flex items-center justify-center"
-                :class="getTransactionColor(transaction)"
-              >
+              <div class="w-12 h-12 rounded-xl shrink-0 flex items-center justify-center"
+                :class="getTransactionColor(transaction)">
                 <component :is="getTransactionIcon(transaction)" :size="22" />
               </div>
-              
+
               <!-- Details -->
               <div class="flex-1 min-w-0">
                 <div class="flex justify-between items-start mb-0.5">
                   <span class="text-[10px] font-bold uppercase tracking-tighter text-slate-500">
                     {{ transaction.date }}
                   </span>
-                  <span 
-                    class="font-bold text-sm"
-                    :class="transaction.credit > 0 ? 'text-emerald-600' : 'text-slate-700'"
-                  >
-                    {{ transaction.credit > 0 ? '+' : '-' }} {{ formatCurrency(transaction.credit || transaction.debit) }}
+                  <span class="font-bold text-sm"
+                    :class="transaction.credit > 0 ? 'text-emerald-600' : 'text-slate-700'">
+                    {{ transaction.credit > 0 ? '+' : '-' }} {{ formatCurrency(transaction.credit || transaction.debit)
+                    }}
                   </span>
                 </div>
-                <p class="text-sm font-semibold text-slate-700 truncate leading-tight group-hover:text-pecatu transition-colors">
+                <p
+                  class="text-sm font-semibold text-slate-700 truncate leading-tight group-hover:text-pecatu transition-colors">
                   {{ transaction.description }}
                 </p>
                 <p class="text-[11px] text-slate-400 font-medium">
@@ -345,14 +338,13 @@ const getTransactionColor = (transaction) => {
               </div>
 
               <!-- Tooltip -->
-              <div 
-                v-if="activeTooltipIndex === index"
-                class="absolute left-4 right-4 bottom-full mb-2 z-50 p-4 bg-slate-800 text-white text-xs font-medium rounded-2xl shadow-2xl animate-in fade-in slide-in-from-bottom-2 duration-200"
-              >
+              <div v-if="activeTooltipIndex === index"
+                class="absolute left-4 right-4 bottom-full mb-2 z-50 p-4 bg-slate-800 text-white text-xs font-medium rounded-2xl shadow-2xl animate-in fade-in slide-in-from-bottom-2 duration-200">
                 <div class="relative">
                   <p class="leading-relaxed">{{ transaction.description }}</p>
                   <!-- Arrow -->
-                  <div class="absolute -bottom-5 left-1/2 -translate-x-1/2 w-4 h-4 bg-slate-800 rotate-45 rounded-sm"></div>
+                  <div class="absolute -bottom-5 left-1/2 -translate-x-1/2 w-4 h-4 bg-slate-800 rotate-45 rounded-sm">
+                  </div>
                 </div>
               </div>
             </div>
@@ -381,6 +373,7 @@ const getTransactionColor = (transaction) => {
 .scrollbar-none::-webkit-scrollbar {
   display: none;
 }
+
 .scrollbar-none {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -391,10 +384,12 @@ const getTransactionColor = (transaction) => {
 .slide-up-leave-active {
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
 .slide-up-enter-from {
   opacity: 0;
   transform: translateY(30px) scale(0.98);
 }
+
 .slide-up-leave-to {
   opacity: 0;
   transform: translateY(-30px) scale(1.02);
@@ -405,19 +400,27 @@ const getTransactionColor = (transaction) => {
 .list-complete-leave-active {
   transition: all 0.4s ease;
 }
+
 .list-complete-enter-from {
   opacity: 0;
   transform: translateY(20px);
 }
+
 .list-complete-leave-to {
   opacity: 0;
   transform: translateY(-20px);
 }
 
 @keyframes spin-slow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
+
 .animate-spin-slow {
   animation: spin-slow 12s linear infinite;
 }

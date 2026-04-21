@@ -27,7 +27,7 @@ const iconMap = {
   <div class="animate-in fade-in slide-in-from-bottom-4 duration-500">
     <Header />
     
-    <div class="px-6 py-6 pb-20 space-y-8">
+    <div class="px-6 pt-24 pb-20 space-y-8">
       <!-- Hero Section -->
       <section class="space-y-2">
         <h2 class="text-3xl font-serif font-bold text-slate-800">Halo, Tetangga! 👋</h2>
