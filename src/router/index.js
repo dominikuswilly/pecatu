@@ -31,6 +31,12 @@ const router = createRouter({
       name: 'news',
       component: () => import('@/views/MaintenanceView.vue'),
       meta: { title: 'Berita' }
+    },
+    {
+      path: '/keuangan',
+      name: 'finance',
+      component: () => import('@/views/FinanceView.vue'),
+      meta: { title: 'Keuangan' }
     }
   ],
   scrollBehavior() {
