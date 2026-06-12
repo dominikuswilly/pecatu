@@ -1,5 +1,8 @@
 services:
   pecatu-services:
+    build:
+      context: .
+      dockerfile: Dockerfile
     image: registry.bengkelfajarjaya.com/pecatu/stable:1.0.0
     ports:
       - "6100:80"
