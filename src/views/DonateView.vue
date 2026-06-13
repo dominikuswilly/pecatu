@@ -23,7 +23,7 @@ const donateId = route.params.id || '2026061301'
 
 onMounted(async () => {
   try {
-    const response = await fetch(`https://api.pecatu.web.id/public/donate/${donateId}`)
+    const response = await fetch(`https://api.pecatu.web.id/public/donate/2026061301`)
     const json = await response.json()
     if (json.status === 'success') {
       donationData.value = json.data
