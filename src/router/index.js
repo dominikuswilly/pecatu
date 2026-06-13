@@ -37,6 +37,12 @@ const router = createRouter({
       name: 'finance',
       component: () => import('@/views/FinanceView.vue'),
       meta: { title: 'Keuangan' }
+    },
+    {
+      path: '/donasi/:id?',
+      name: 'donate',
+      component: () => import('@/views/DonateView.vue'),
+      meta: { title: 'Donasi Fasilitas Cluster' }
     }
   ],
   scrollBehavior() {

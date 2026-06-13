@@ -11,7 +11,8 @@ import {
   Droplets,
   Trash2,
   ShieldCheck,
-  Wifi
+  Wifi,
+  Gift
 } from 'lucide-vue-next'
 import Header from '@/components/Header.vue'
 import BaseCard from '@/components/BaseCard.vue'
@@ -19,7 +20,7 @@ import { contacts, quickServices } from '@/data/contacts'
 
 const iconMap = {
   CreditCard, Newspaper, Home: HomeIcon, AlertCircle,
-  ShieldCheck, Trash2, Zap, Droplets, Wifi
+  ShieldCheck, Trash2, Zap, Droplets, Wifi, Gift
 }
 </script>
 

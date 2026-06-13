@@ -50,5 +50,6 @@ export const quickServices = [
   { id: 'iuran', title: 'Iuran Warga', icon: 'CreditCard', path: '/iuran' },
   { id: 'berita', title: 'Berita Cluster', icon: 'Newspaper', path: '/berita' },
   { id: 'layanan', title: 'Layanan Rumah', icon: 'Home', path: '/layanan' },
-  { id: 'lapor', title: 'Lapor Kendala', icon: 'AlertCircle', path: '/layanan' }
+  { id: 'lapor', title: 'Lapor Kendala', icon: 'AlertCircle', path: '/layanan' },
+  { id: 'donasi', title: 'Donasi', icon: 'Gift', path: '/donasi' }
 ]
