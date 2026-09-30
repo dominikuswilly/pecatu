@@ -23,8 +23,12 @@ const router = createRouter({
     {
       path: '/iuran',
       name: 'billing',
-      component: () => import('@/views/MaintenanceView.vue'),
-      meta: { title: 'Iuran' }
+      component: () => import('@/views/ContributionFeeView.vue'),
+      meta: { title: 'Iuran Kas Warga' }
+    },
+    {
+      path: '/contribution-fee',
+      redirect: '/iuran'
     },
     {
       path: '/berita',
