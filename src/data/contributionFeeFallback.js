@@ -1,5 +1,5 @@
 export const fallbackContributionFeeData = {
-  "source": "data/01.csv",
+  "source": "https://docs.google.com/spreadsheets/d/1dinqvqrq8g7drc12yM5kpH1e1rv4-XXw/export?format=csv&gid=353831481",
   "summary": {
     "total_residents": 268,
     "total_collected": 7265000,
@@ -7,6 +7,18 @@ export const fallbackContributionFeeData = {
     "total_extra_cards": 135,
     "total_months_covered": 28,
     "cluster_summaries": [
+      {
+        "name": "Akasha",
+        "total_residents": 110,
+        "total_paid_amount": 3315000,
+        "total_access_cards": 79
+      },
+      {
+        "name": "Amartha",
+        "total_residents": 67,
+        "total_paid_amount": 2010000,
+        "total_access_cards": 48
+      },
       {
         "name": "Ayodya",
         "total_residents": 88,
@@ -24,18 +36,6 @@ export const fallbackContributionFeeData = {
         "total_residents": 1,
         "total_paid_amount": 125000,
         "total_access_cards": 0
-      },
-      {
-        "name": "Akasha",
-        "total_residents": 110,
-        "total_paid_amount": 3315000,
-        "total_access_cards": 79
-      },
-      {
-        "name": "Amartha",
-        "total_residents": 67,
-        "total_paid_amount": 2010000,
-        "total_access_cards": 48
       }
     ]
   },

@@ -57,11 +57,14 @@ const fetchContributionData = async (urlOverride = '') => {
   const apiBase = import.meta.env.VITE_API_URL || 'https://api.pecatu.web.id'
   const endpoints = [
     urlOverride 
-      ? `${apiBase}/public/contribution-fee?url=${encodeURIComponent(urlOverride)}` 
-      : `${apiBase}/public/contribution-fee`,
+      ? `http://127.0.0.1:6201/public/contribution-fee?url=${encodeURIComponent(urlOverride)}` 
+      : `http://127.0.0.1:6201/public/contribution-fee`,
     urlOverride 
       ? `http://localhost:6201/public/contribution-fee?url=${encodeURIComponent(urlOverride)}` 
-      : `http://localhost:6201/public/contribution-fee`
+      : `http://localhost:6201/public/contribution-fee`,
+    urlOverride 
+      ? `${apiBase}/public/contribution-fee?url=${encodeURIComponent(urlOverride)}` 
+      : `${apiBase}/public/contribution-fee`
   ]
 
   let succeeded = false
