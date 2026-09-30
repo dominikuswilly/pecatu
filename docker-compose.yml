@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: registry.bengkelfajarjaya.com/pecatu/stable:1.0.0
+    image: gitea.bengkelfajarjaya.com/gcc/pecatu-fe/stable:1.0.0
     ports:
       - "6100:80"
     restart: unless-stopped
